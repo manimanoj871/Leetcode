@@ -1,38 +1,38 @@
 class Solution {
     public List<Integer> spiralOrder(int[][] matrix) {
-        List<Integer> result = new ArrayList<>();
-        if(matrix == null || matrix.length == 0) {
-            return result;
-        }
-        int m = matrix.length;
-        int n = matrix[0].length;
-        int top = 0, bottom = m - 1, left = 0, right = n - 1;
-        while(top <= bottom && left <= right) {
-            // Traverse right
-            for(int i = left; i <= right; i++) {
-                result.add(matrix[top][i]);
-            }
-            top++;
-            // Traverse down
-            for(int i = top; i <= bottom; i++) {
-                result.add(matrix[i][right]);
-            }
-            right--;
-            // Traverse left
-            if(top <= bottom) {
-                for(int i = right; i >= left; i--) {
-                    result.add(matrix[bottom][i]);
+        int rowbegin=0,colbegin=0;
+        int rowend=matrix.length-1;
+        int colend=matrix[0].length-1;
+        ArrayList<Integer> arr=new ArrayList<>();
+         if (matrix.length == 0) {
+      return arr;
+    }
+
+        while(rowbegin<=rowend && colbegin<=colend)
+        {
+             for(int i=colbegin;i<=colend;i++)
+                arr.add(matrix[rowbegin][i]);
+            rowbegin++;
+            for(int j=rowbegin;j<=rowend;j++)
+                arr.add(matrix[j][colend]);
+            colend--;
+            if(rowbegin<=rowend)
+            {
+                for(int j=colend;j>=colbegin;j--)
+                {
+                    arr.add(matrix[rowend][j]);
                 }
-                bottom--;
             }
-            // Traverse up
-            if(left <= right) {
-                for(int i = bottom; i >= top; i--) {
-                    result.add(matrix[i][left]);
+            rowend--;
+            if(colbegin<=colend)
+            {
+                for(int j=rowend;j>=rowbegin;j--)
+                {
+                    arr.add(matrix[j][colbegin]);
                 }
-                left++;
             }
-        }
-        return result;
+            colbegin++;
+            }
+        return arr;
     }
 }
