@@ -5,10 +5,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0011-container-with-most-water](https://github.com/manimanoj871/Leetcode/tree/master/0011-container-with-most-water) |
+| [0080-remove-duplicates-from-sorted-array-ii](https://github.com/manimanoj871/Leetcode/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 ## Two Pointers
 |  |
 | ------- |
 | [0011-container-with-most-water](https://github.com/manimanoj871/Leetcode/tree/master/0011-container-with-most-water) |
+| [0080-remove-duplicates-from-sorted-array-ii](https://github.com/manimanoj871/Leetcode/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 ## Greedy
 |  |
 | ------- |
